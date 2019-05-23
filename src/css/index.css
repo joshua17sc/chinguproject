@@ -1,28 +1,45 @@
 body {
   font-family: 'Inconsolata', monospace;
-  background-color: #2b2b2b;
-  color: rgb(214, 214, 214);
-  max-width: 900px;
-  margin: 0 auto;
+  background-color: #282A36;
+  color: #f8f8f2!important;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "navbar main"
 }
-
-#root {
-  background-color: #3f3f3f;
-  padding: 60px;
-  border-radius: 20px;
-  height: 100%;
-  margin-top: 100px;
+nav{
+  grid-area: navbar;
+  background-color: #434356;
+  align-self: start;
 }
-
-.logo {
-  display: block;
-  margin: 0 auto;
+footer{
+  grid-area: navbar;
+  background-color: #434356;
+  align-self: end;
 }
-
-h1 {
-  margin-top: 50px;
+main{
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "reddit history history git"
+                        "reddit clock clock git"
 }
-
-p {
-  font-size: 22px;
+a {
+  text-decoration: none;
+}
+.reddit{
+  grid-area: reddit;
+}
+.history{
+  grid-area: history;
+}
+.github{
+  grid-area: git;
+}
+.clock{
+  grid-area:clock;
+}
+.link-to-comments{
+  text-decoration: underline;
 }
