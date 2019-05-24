@@ -12,15 +12,20 @@
     <body>
         <!-- Add your site or application content here -->
         <nav>
-          <ul>
-            <li><a href="default.asp" class="navbar"><i class="fa fa-wrench icon"> </i> SETTINGS</a></li>
-            <li><a href="default.asp" class="navbar"><i class="fas fa-code"> </i> GISTS</a></li>
-            <li><a href="default.asp" class="navbar"><i class="fab fa-stack-overflow"> </i> STACK OVERFLOW</a></li>
-            <li><a href="default.asp" class="navbar"><i class="fas fa-chart-line"> </i> TRENDING</a></li>
-            <li><a href="default.asp" class="navbar"><i class="fas fa-pencil-alt"> </i> SCRATCH PAD</a></li>
-            <li><a href="default.asp" class="navbar"><i class="far fa-lightbulb"> </i> PLAYGROUND <i class="fas fa-lock"></i></a></li>
-            <li><a href="default.asp" class="navbar"><i class="fas fa-question"> </i> HELP/INTRO</a></li>
-          </ul>
+            <button class="navbar" id="settings"><i class="fa fa-wrench icon"> </i> SETTINGS</button>
+            <button class="navbar" id="gists"><i class="fas fa-code"> </i> GISTS</button>
+            <button class="navbar" id="stack"><i class="fab fa-stack-overflow"> </i> STACK OVERFLOW</button>
+            <button class="navbar" id="trending"><i class="fas fa-chart-line"> </i> TRENDING</button>
+            <button class="navbar" id="scratch"><i class="fas fa-pencil-alt"> </i> SCRATCH PAD</button>
+            <button class="navbar" id="playground"><i id="lightbulb" class="far fa-lightbulb"> </i> PLAYGROUND  <i id="lock"class="fas fa-lock" ></i></button>
+            <button class="navbar" id="help"><i class="fas fa-question"> </i> HELP/INTRO</button>
+            <a id="initab" href="http://initab.com/"><img src="http://initab.com/assets/images/initab_logo_white.png" alt="Initab logo"></a>
+          <div class="footer">
+            <a class="social-media" id="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fchrome.google.com%2Fwebstore%2Fdetail%2Finitab%2Figmbdimmfbpdplpahpapkploofmgaipl&title=Initab&description=If%20you%27re%20a%20developer%20and%20you%20use%20Chrome%20-%20you%20have%20to%20check%20out%20Initab!"><i class="fab fa-facebook-f"></i></a>
+            <a class="social-media" id="linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fchrome.google.com%2Fwebstore%2Fdetail%2Finitab%2Figmbdimmfbpdplpahpapkploofmgaipl"><i class="fab fa-linkedin-in"></i></a>
+            <a class="social-media" id="twitter" href="https://twitter.com/intent/tweet?text=If%20you%27re%20a%20developer%20and%20you%20use%20Chrome%20-%20you%20have%20to%20check%20out%20Initab%21%20%28%40InitabExtension%29&url=https%3A%2F%2Fchrome.google.com%2Fwebstore%2Fdetail%2Finitab%2Figmbdimmfbpdplpahpapkploofmgaipl&original_referer="><i class="fab fa-twitter"></i></a>
+            <a class="social-media" id="reddit" href="https://www.reddit.com/submit?url=https%3A%2F%2Fchrome.google.com%2Fwebstore%2Fdetail%2Finitab%2Figmbdimmfbpdplpahpapkploofmgaipl&title=If%20you%27re%20a%20developer%20and%20you%20use%20Chrome%20-%20you%20have%20to%20check%20out%20Initab!"><i class="fab fa-reddit-alien"></i></a>
+          </div>
         </nav>
         <main>
           <section class="reddit">
@@ -62,23 +67,20 @@
           </section>
           <section class="history">
             <h1><i class="far fa-clock"></i> RELEVANT JAVASCRIPT HISTORY</h1>
-            <div class="history-item">
-              <img src="https://www.google.com/s2/favicons?domain=https://www.reddit.com/r/javascript/comments/bq7q7v/chromium_developers_eslint_rules/" alt="Reddit icon">
-              <div class="title">
-                <a href="http://themoviespoiler.com/movies/us/">Chromium developers' eslint rules : javascript</a>
-              </div>
-              <div class="days-ago">
-                <span>a day ago</span>
-              </div>
-            </div>
-            <div class="history-item">
-              <img src="https://www.google.com/s2/favicons?domain=https://www.reddit.com/r/javascript/comments/bq7q7v/chromium_developers_eslint_rules/" alt="Github icon">
-              <div class="title">
-                <a href="http://themoviespoiler.com/movies/shazam/">serpient/simple-boilerplate: HTML/CSS/JavaScript boilerplate with live server</a>
-              </div>
-              <div class="days-ago">
-                <span>a day ago</span>
-              </div>
+            <ul class="history-list">
+              <li class="history-item">
+                <img class="history-favicon" src="https://www.google.com/s2/favicons?domain=https://www.reddit.com/r/javascript/comments/bq7q7v/chromium_developers_eslint_rules/" alt="Reddit icon">
+                  <a class="title" href="http://themoviespoiler.com/movies/us/">Chromium developers' eslint rules : javascript</a>
+                <span class="days-ago">a day ago</span>
+              </li>
+              <li class="history-item">
+                <img class="history-favicon" src="https://www.google.com/s2/favicons?domain=https://www.reddit.com/r/javascript/comments/bq7q7v/chromium_developers_eslint_rules/" alt="Github icon">
+                <a class="title" href="http://themoviespoiler.com/movies/shazam/">serpient/simple-boilerplate: HTML/CSS/JavaScript boilerplate with live server</a>
+                <span class="days-ago">a day ago</span>
+              </li>
+            </ul>
+            <div class="clock">
+
             </div>
           </section>
           <section class="github">
@@ -145,19 +147,8 @@
             </div>
           </div>
         </section>
-        <section class="clock">
-          <div class="clock">
+      </main>
 
-          </div>
-        </section>
-        </main>
-        <footer>
-          <a id="initab" href="http://initab.com/"><img src="https://initab.com/assets/images/initab_logo.png" alt="Initab logo"></a>
-          <a class="social-media" id="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fchrome.google.com%2Fwebstore%2Fdetail%2Finitab%2Figmbdimmfbpdplpahpapkploofmgaipl&title=Initab&description=If%20you%27re%20a%20developer%20and%20you%20use%20Chrome%20-%20you%20have%20to%20check%20out%20Initab!"><i class="fab fa-facebook-f"></i></a>
-          <a class="social-media" id="linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fchrome.google.com%2Fwebstore%2Fdetail%2Finitab%2Figmbdimmfbpdplpahpapkploofmgaipl"><i class="fab fa-linkedin-in"></i></a>
-          <a class="social-media" id="twitter" href="https://twitter.com/intent/tweet?text=If%20you%27re%20a%20developer%20and%20you%20use%20Chrome%20-%20you%20have%20to%20check%20out%20Initab%21%20%28%40InitabExtension%29&url=https%3A%2F%2Fchrome.google.com%2Fwebstore%2Fdetail%2Finitab%2Figmbdimmfbpdplpahpapkploofmgaipl&original_referer="><i class="fab fa-twitter"></i></a>
-          <a class="social-media" id="reddit" href="https://www.reddit.com/submit?url=https%3A%2F%2Fchrome.google.com%2Fwebstore%2Fdetail%2Finitab%2Figmbdimmfbpdplpahpapkploofmgaipl&title=If%20you%27re%20a%20developer%20and%20you%20use%20Chrome%20-%20you%20have%20to%20check%20out%20Initab!"><i class="fab fa-reddit-alien"></i></a>
-        </footer>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
         <!-- ================================ -->
         <!-- Add more JavaScript files here!! -->
