@@ -7,16 +7,16 @@ body {
   display: grid;
   height: 100vh;
   width: 100vw;
-  grid-template-columns: 160px 1fr;
+  grid-template-columns: 150px 1fr;
   grid-template-rows: auto;
   grid-template-areas: "navbar main";
   margin: 0;
+  overflow: hidden;
 }
 nav{
   grid-area: navbar;
   background-color: #434356;
   text-align:left;
-  height:100%;
 }
 .navbar{
   font-size: 11px;
@@ -106,11 +106,48 @@ nav{
   position: absolute;
   bottom: 40px;
   left: 16px;
-  color:#6272A4;
+}
+#initab-logo{
+  width: 100px;
+  height: auto;
+}
+#initab:hover{
+  color: #f1fa8c;
 }
 .footer{
   position: absolute;
-  bottom: 18px;
+  bottom: 10px;
+  left: 10px;
+  display: flex;
+}
+.social-media{
+  margin: 0 4px;
+  height: 24px;
+  width: 24px;
+  color:white;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: text-bottom;
+}
+#facebook{
+  background-color: #3B5997;
+  padding-top: 7px;
+  padding-left: 1px
+}
+#linkedin{
+  background-color: #2B80B1;
+  padding-top: 7px;
+  padding-left: 1px
+}
+#twitter{
+  background-color: #3DACED;
+  padding-top: 7px;
+  padding-left: 1px
+}
+#reddit{
+  background-color: #5F99CE;
+  padding-top: 7px;
+  padding-left: 1px
 }
 main{
   grid-area: main;
@@ -174,8 +211,13 @@ padding-left: 10px;
   color: #8be9fd;
   transition: all .2s ease-in;
 }
-.history{
+.center{
   grid-area: history;
+}
+.history{
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color:  #434356;
 }
 .history-list{
   margin-top: 40px;
@@ -211,11 +253,103 @@ padding-left: 10px;
 .days-ago{
   color:#999;
   text-align: right;
-  width:25%;
-  margin-right: 5px;
+margin-left: 35px;
+}
+#clock{
+  position: absolute;
+  bottom: 150px;
+  text-align: center;
+  margin-left:90px;
+}
+.clock{
+  color: #6272a4;
+}
+#clockhour{
+  font-size: 120px;
+  font-weight: 400;
+}
+#clockampm{
+  font-size: 32px;
+  font-weight: 400;
+}
+#clockday{
+  font-weight: 200;
+  font-size: 20px;
 }
 .github{
   grid-area: git;
+  text-align: center;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color:  #434356;
+  margin-left: 20px;
+  width: calc(100% - 25px);
+}
+.choice{
+  margin-top: 24px;
+text-align: center;
+}
+.switch{
+  color: #6272a4;
+}
+.switch:hover{
+  color: #f1fa8c;
+}
+.issues{
+  color: #f1fa8c;
+}
+.merge-requests, .pull-requests{
+  color: #ff79c6;
+}
+.merge-requests:hover, .pull-requests:hover{
+  color: #50fa7b;
+  transition: all .2s ease-in;
+}
+.caret{
+  position: relative;
+  left: calc(14% - 13px);
+  bottom: 3px;
+}
+.hide-git-history{
+  display:none;
+}
+.hide-git-panel{
+  display:none;
+  overflow: hidden;
+}
+.item{
+margin:13px 0;
+border-left-color: #434356;
+margin-bottom: 40px;
+text-align: left;
+border-left-width: 3px;
+border-left-style: solid;
+padding-left: 10px;
+}
+.item:hover{
+  border-left-color: #50fa7b;
+  transition: all .2s ease-in;
+}
+.repo{
+  width: auto;
+  color: #6272a4;
+  font-size: 14px;
+  font-weight: 100;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow-wrap:anywhere;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.item-number{
+  color: #ff79c6;
+  font-size: 14px;
+  font-weight: 100;
+  margin-bottom: 4px;
+  margin-top: 0;
+}
+.description{
+  color:#f8f8f2;
 }
 .clock{
   grid-area:clock;
