@@ -1,3 +1,4 @@
+/*modified the following JavaScript from https://www.ricocheting.com/code/javascript/html-generator/date-time-clock */
 var tmonth=["January","February","March","April","May","June","July","August","September","October","November","December"];
 
 function getHour(){
