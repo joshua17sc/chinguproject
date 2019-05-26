@@ -1,28 +1,359 @@
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #2b2b2b;
-  color: rgb(214, 214, 214);
-  max-width: 900px;
-  margin: 0 auto;
+  font-family: 'Inconsolata',monospace;
+  font-size: 14px;
+  font-weight: 100;
+  background-color: #282A36;
+  color: #f8f8f2;
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  grid-template-columns: 150px 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "navbar main";
+  margin: 0;
+  overflow: hidden;
 }
-
-#root {
-  background-color: #3f3f3f;
-  padding: 60px;
-  border-radius: 20px;
-  height: 100%;
-  margin-top: 100px;
+nav{
+  grid-area: navbar;
+  background-color: #434356;
+  text-align:left;
 }
-
-.logo {
-  display: block;
-  margin: 0 auto;
+.navbar{
+  font-size: 11px;
+  width: 100%;
+  height: 18px;
+  margin:10px 0;
+  left: 10px;
+  text-align: left;
+  background-color: #434356;
+  border-width: 0;
+  padding: 11px;
 }
-
-h1 {
-  margin-top: 50px;
+.navbar i{
+  font-size: 14px;
+  width: 1em;
+  margin: 0;
+  border: 0;
 }
-
-p {
-  font-size: 22px;
+#settings{
+  color: #8be9fd;
+}
+#settings i{
+  background-color: #8be9fd;
+  color: #434356;
+  padding: 2px;
+  border-radius: 2px;
+}
+#gists{
+  color: #50fa7b;
+}
+#gists i{
+  background-color: #50fa7b;
+  color: #434356;
+  padding: 2px 5px 2px 1px;
+  border-radius: 2px;
+}
+#stack{
+  color: #E5AF5D;
+}
+#stack i{
+  background-color: #E5AF5D;
+  color: #434356;
+  padding: 3px;
+  border-radius: 2px;
+}
+#trending{
+  color: #ff79c6;
+}
+#trending i{
+  background-color: #ff79c6;
+  color: #434356;
+  padding: 3px;
+  border-radius: 2px;
+}
+#scratch{
+  color: #bd93f9;
+}
+#scratch i{
+  background-color: #bd93f9;
+  color: #434356;
+  padding: 3px;
+  border-radius: 2px;
+}
+#playground{
+  color: #f8f8f2;
+}
+#lightbulb{
+  background-color: #f8f8f2;
+  color: #434356;
+  padding: 3px 1px 3px 6px;
+  border-radius: 2px;
+}
+#lock{
+  background-color: #434356;
+  color: #f8f8f2;
+}
+#help{
+  color: #f1fa8c;
+}
+#help i{
+  background-color: #f1fa8c;
+  color: #434356;
+  padding: 3px;
+  border-radius: 2px;
+}
+#initab{
+  position: absolute;
+  bottom: 40px;
+  left: 16px;
+}
+#initab-logo{
+  width: 100px;
+  height: auto;
+}
+#initab:hover{
+  color: #f1fa8c;
+}
+.footer{
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  display: flex;
+}
+.social-media{
+  margin: 0 4px;
+  height: 24px;
+  width: 24px;
+  color:white;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: text-bottom;
+}
+#facebook{
+  background-color: #3B5997;
+  padding-top: 7px;
+  padding-left: 1px
+}
+#linkedin{
+  background-color: #2B80B1;
+  padding-top: 7px;
+  padding-left: 1px
+}
+#twitter{
+  background-color: #3DACED;
+  padding-top: 7px;
+  padding-left: 1px
+}
+#reddit{
+  background-color: #5F99CE;
+  padding-top: 7px;
+  padding-left: 1px
+}
+main{
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "reddit history history git"
+}
+a {
+  text-decoration: none;
+}
+a:hover{
+  transition: all .2s ease-in;
+}
+h1{
+  margin-top: 40px;
+  margin-bottom: 10px;
+  font-weight: 100;
+  color:#8be9fd;
+  font-size: 16px;
+  text-align: center;
+}
+ul{
+  list-style-type: none;
+}
+.reddit{
+  grid-area: reddit;
+}
+.reddit-article{
+margin:13px;
+border-left-color: #434356;
+margin-bottom: 40px;
+text-align: left;
+border-left-width: 3px;
+border-left-style: solid;
+padding-left: 10px;
+}
+.reddit-article:hover{
+  border-left-color: #50fa7b;
+  transition: all .2s ease-in;
+}
+.headline{
+  color: #f8f8f2;
+  margin-bottom: 4px;
+}
+.posted-by{
+  color: #f1fa8c;
+  margin-bottom: 4px;
+}
+.posted{
+  color:#8be9fd;
+}
+.score{
+  color:#6272a4;
+  margin-bottom: 4px;
+}
+.link-to-comments a{
+  color: #ff79c6;
+}
+.link-to-comments a:hover{
+  color: #8be9fd;
+  transition: all .2s ease-in;
+}
+.center{
+  grid-area: history;
+}
+.history{
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color:  #434356;
+}
+.history-list{
+  margin-top: 40px;
+}
+.history-item{
+  margin-bottom: 18px;
+  text-align: left;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+.history-favicon{
+    border-color: #50fa7b;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border-radius: 2px;
+    border-width: 1px;
+    border-style: solid;
+    margin-right: 6px;
+}
+.title:hover  {
+  color: #f1fa8c;
+  transition: all .2s ease-in;
+}
+.title{
+  width: calc(75% - 24px);
+  white-space: nowrap;
+  display: inline-block;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  color: #6272a4;
+}
+.days-ago{
+  color:#999;
+  text-align: right;
+margin-left: 35px;
+}
+#clock{
+  position: absolute;
+  bottom: 150px;
+  text-align: center;
+  margin-left:90px;
+}
+.clock{
+  color: #6272a4;
+}
+#clockhour{
+  font-size: 120px;
+  font-weight: 400;
+}
+#clockampm{
+  font-size: 32px;
+  font-weight: 400;
+}
+#clockday{
+  font-weight: 200;
+  font-size: 20px;
+}
+.github{
+  grid-area: git;
+  text-align: center;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color:  #434356;
+  margin-left: 20px;
+  width: calc(100% - 25px);
+}
+.choice{
+  margin-top: 24px;
+text-align: center;
+}
+.switch{
+  color: #6272a4;
+}
+.switch:hover{
+  color: #f1fa8c;
+}
+.issues{
+  color: #f1fa8c;
+}
+.merge-requests, .pull-requests{
+  color: #ff79c6;
+}
+.merge-requests:hover, .pull-requests:hover{
+  color: #50fa7b;
+  transition: all .2s ease-in;
+}
+.caret{
+  position: relative;
+  left: calc(14% - 13px);
+  bottom: 3px;
+}
+.hide-git-history{
+  display:none;
+}
+.hide-git-panel{
+  display:none;
+  overflow: hidden;
+}
+.item{
+margin:13px 0;
+border-left-color: #434356;
+margin-bottom: 40px;
+text-align: left;
+border-left-width: 3px;
+border-left-style: solid;
+padding-left: 10px;
+}
+.item:hover{
+  border-left-color: #50fa7b;
+  transition: all .2s ease-in;
+}
+.repo{
+  width: auto;
+  color: #6272a4;
+  font-size: 14px;
+  font-weight: 100;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow-wrap:anywhere;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.item-number{
+  color: #ff79c6;
+  font-size: 14px;
+  font-weight: 100;
+  margin-bottom: 4px;
+  margin-top: 0;
+}
+.description{
+  color:#f8f8f2;
+}
+.clock{
+  grid-area:clock;
+}
+.link-to-comments{
+  text-decoration: underline;
 }
