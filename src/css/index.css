@@ -220,9 +220,14 @@ padding-left: 10px;
   grid-area: history;
 }
 .history{
+  max-height: 50vh;
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color:  #434356;
+  overflow-y: scroll;
+}
+.history::-webkit-scrollbar{
+  display: none;
 }
 .history-list{
   margin-top: 40px;
