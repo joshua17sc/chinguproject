@@ -175,6 +175,11 @@ ul{
 }
 .reddit{
   grid-area: reddit;
+  height: 100vh;
+  overflow-y: scroll;
+}
+.reddit::-webkit-scrollbar{
+  display: none;
 }
 .reddit-article{
 margin:13px;
@@ -284,6 +289,11 @@ margin-left: 35px;
   border-bottom-color:  #434356;
   margin-left: 20px;
   width: calc(100% - 25px);
+  height: 100vh;
+  overflow-y: scroll;
+}
+.github::-webkit-scrollbar{
+  display: none;
 }
 .choice{
   margin-top: 24px;
