@@ -111,8 +111,9 @@ nav{
   width: 100px;
   height: auto;
 }
-#initab:hover{
-  color: #f1fa8c;
+#Group-5:hover{
+  fill: #f1fa8c;
+  transition: all .2s ease-in;
 }
 .footer{
   position: absolute;
